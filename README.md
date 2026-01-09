@@ -1,25 +1,28 @@
-# 🏥 AI-Powered Health Risk Profiler
+# 🏥 Health Risk Profiler
 
-> A sophisticated backend application that utilizes Llama 3 models to generate personalized health risk assessments from patient demographics and physiological metrics.
 
-## ✨ Key Features
-- **Multimodal Input:** Handles both natural language text and structured metrics.
-- **Predictive Analytics:** Employs Llama 3 via Groq for high-speed clinical reasoning.
-- **Strict Validation:** Uses `Zod` for deep schema validation of AI responses.
+A Node.js backend service that uses Large Language Models to analyze patient data and generate clinical risk assessments.
 
-## 🏗 Tech Stack
-- **Runtime:** Node.js (Express)
-- **AI Engine:** Llama 3 (via Groq Cloud)
-- **Validation:** Zod
-- **Storage:** MongoDB / MySQL
+## 📖 Table of Contents
+* [Overview](#-overview)
+* [Architecture](#-architecture)
+* [Key Features](#-key-features)
+* [Getting Started](#-getting-started)
+* [API Usage Examples](#-api-usage-examples)
+  
 
-## 🚀 Quick Start
+---
 
-### Prerequisites
-- Node.js `v18.x` or higher
-- A valid `GROQ_API_KEY`
+## 🧐 Overview
+The **Health Risk Profiler** transforms unstructured clinical text into structured health insights. It solves the problem of manual data interpretation by automating the extraction of key health metrics.
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/username/health-risk-profiler.git](https://github.com/username/health-risk-profiler.git)
+## 🏗 Architecture
+The system employs a **Modular AI Pipeline** to ensure accuracy and safety:
+
+```mermaid
+graph TD;
+    A[Unstructured Input] --> B[Extraction Layer];
+    B --> C{Validation Engine};
+    C -->|Valid| D[Risk Scoring Logic];
+    C -->|Invalid| E[Error Handler];
+    D --> F[Final Health Report];
