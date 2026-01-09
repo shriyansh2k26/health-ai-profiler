@@ -71,6 +71,19 @@ curl -X POST http://localhost:3000/api/v1/health/analyze \
   -F "surveyForm=@/path/to/survey.jpg" \
   -F "textData=Optional extra text"
 ```
+Postman Collection & Tests
+
+Usage examples:
+Quick steps:
+- Open Postman and create a new `POST` request to `{{host}}/api/v1/health/analyze` (use `http://localhost:3000` for `{{host}}` during local runs).
+- For a text-only request, set Body -> raw -> JSON and send:
+
+```json
+{ "textData": "I am 45, I smoke occasionally and exercise rarely." }
+```
+
+- For an image upload, select `form-data`, add key `surveyForm` (type: File) and attach an image; optionally add `textData` as a text field.
+
 
 Notes & Architecture details
 - The service uses `groq-sdk` to call a chat/completions API for structured JSON extraction. The extracted JSON is validated with Zod (`src/schemas/healthSchema.js`).
@@ -80,5 +93,6 @@ Notes & Architecture details
 Troubleshooting
 - Ensure `GROQ_API_KEY` is set and valid.
 - If you see file permission or cleanup errors, check the `uploads/` folder permissions.
+
 
 
