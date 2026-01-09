@@ -3,13 +3,6 @@
 
 A Node.js backend service that uses Large Language Models to analyze patient data and generate clinical risk assessments.
 
-## 📖 Table of Contents
-* [Overview](#-overview)
-* [Architecture](#-architecture)
-* [Key Features](#-key-features)
-* [Getting Started](#-getting-started)
-* [API Usage Examples](#-api-usage-examples)
-  
 
 ---
 
@@ -64,4 +57,5 @@ Code snippet:
   {
   "textData": "Patient is 45, smoker, and rarely exercises."
   }
+
 
