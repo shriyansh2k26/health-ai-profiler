@@ -1,5 +1,5 @@
 # Health Risk Profiler
-
+LINK- https://health-ai-profiler-production.up.railway.app/
 Lightweight service to extract health survey answers (text or image), score risk, and return recommendations using an LLM-backed extraction pipeline.
 
 **Quick Start**
@@ -93,6 +93,7 @@ Notes & Architecture details
 Troubleshooting
 - Ensure `GROQ_API_KEY` is set and valid.
 - If you see file permission or cleanup errors, check the `uploads/` folder permissions.
+
 
 
 
