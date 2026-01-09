@@ -19,7 +19,7 @@ graph TD;
     C -->|Valid| D[Risk Scoring Logic];
     C -->|Invalid| E[Error Handler];
     D --> F[Final Health Report];
-# 🏥 AI Health Risk Profiler
+
 
 
 
@@ -57,5 +57,6 @@ Code snippet:
   {
   "textData": "Patient is 45, smoker, and rarely exercises."
   }
+
 
 
